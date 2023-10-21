@@ -1,4 +1,4 @@
-package demo_repository
+package main
 
 import "fmt"
 
