@@ -1,0 +1,11 @@
+name: Setup Go environment
+on: [push]
+jobs:
+  Go-Build-Push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v4
+        with:
+          go-version: 'oldstable' # The Go version to download (if necessary) and use.
+      - run: go run main.go
