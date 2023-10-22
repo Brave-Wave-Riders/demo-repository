@@ -1,20 +1,9 @@
 package main
 
-import (
-	"fmt"
-	"net/http"
-	_ "net/http/pprof"
-)
+import "fmt"
 
-func index(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("Welcome!"))
-}
-
-func init() {
-	http.HandleFunc("/", index)
-	go http.ListenAndServe(":8888", nil)
-}
 func main() {
-	fmt.Println("hello,world")
-	select {}
+	for i := 0; i < 10; i++ {
+		fmt.Println("hello,world")
+	}
 }
